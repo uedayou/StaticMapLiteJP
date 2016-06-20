@@ -33,7 +33,7 @@ Class StaticMapLiteJP extends staticMapLite
     protected $markerBaseDir = __DIR__.'/images/markers';
     protected $osmLogo = __DIR__.'/images/osm_logo.png';
 
-    protected $osmLogoStr = "© OpenStreetMap contributors";
+    protected $osmLogoStr = "c OpenStreetMap contributors";
     protected $gsiLogoStr = "GSI Maps";
 
     protected $osmLogoWidth = 240;
@@ -116,9 +116,9 @@ Class StaticMapLiteJP extends staticMapLite
         $logoImg = imagecreatetruecolor($logoWidth, 24);
         $color = imagecolorallocatealpha($logoImg, 0, 0, 0, 0);
         $backgroundColor = imagecolorallocatealpha($logoImg, 255, 255, 255, 30);
-        imagealphablending($logoImg, true); // ブレンドモードを設定する
-        imagesavealpha($logoImg, true); // 完全なアルファチャネルを保存する
-        imagefill($logoImg, 0, 0, $backgroundColor); // 指定座標から指定色で塗る
+        imagealphablending($logoImg, true);
+        imagesavealpha($logoImg, true);
+        imagefill($logoImg, 0, 0, $backgroundColor);
         imagettftext($logoImg, 12, 0, 5, 18, $color, $this->logoFont, $text);
 
         imagecopy($this->image, $logoImg, imagesx($this->image) - imagesx($logoImg), imagesy($this->image) - imagesy($logoImg), 0, 0, imagesx($logoImg), imagesy($logoImg));
