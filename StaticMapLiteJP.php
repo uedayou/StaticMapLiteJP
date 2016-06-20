@@ -33,7 +33,7 @@ Class StaticMapLiteJP extends staticMapLite
     protected $markerBaseDir = __DIR__.'/images/markers';
     protected $osmLogo = __DIR__.'/images/osm_logo.png';
 
-    protected $osmLogoStr = "c OpenStreetMap contributors";
+    protected $osmLogoStr = "© OpenStreetMap contributors";
     protected $gsiLogoStr = "GSI Maps";
 
     protected $osmLogoWidth = 240;
