@@ -405,5 +405,7 @@ Class staticMapLite
 
 }
 
-$map = new staticMapLite();
-print $map->showMap();
+//$map = new staticMapLite();
+//print $map->showMap();
+
+?>
